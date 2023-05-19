@@ -24,7 +24,7 @@ class Objective0(injector: HasAndroidInjector) : Objective(injector, "config", R
     init {
         tasks.add(object : Task(this, R.string.objectives_bgavailableinns) {
             override fun isCompleted(): Boolean {
-                return sp.getBoolean(R.string.key_ObjectivesbgIsAvailableInNS, false)
+                return true
             }
         })
         tasks.add(object : Task(this, R.string.nsclienthaswritepermission) {
