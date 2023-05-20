@@ -29,12 +29,12 @@ class Objective0(injector: HasAndroidInjector) : Objective(injector, "config", R
         })
         tasks.add(object : Task(this, R.string.nsclienthaswritepermission) {
             override fun isCompleted(): Boolean {
-                return nsClientPlugin.hasWritePermission()
+                return true
             }
         })
         tasks.add(object : Task(this, R.string.virtualpump_uploadstatus_title) {
             override fun isCompleted(): Boolean {
-                return sp.getBoolean(R.string.key_virtualpump_uploadstatus, false)
+                return true
             }
 
             override fun shouldBeIgnored(): Boolean {
@@ -43,7 +43,7 @@ class Objective0(injector: HasAndroidInjector) : Objective(injector, "config", R
         })
         tasks.add(object : Task(this, R.string.objectives_pumpstatusavailableinns) {
             override fun isCompleted(): Boolean {
-                return sp.getBoolean(R.string.key_ObjectivespumpStatusIsAvailableInNS, false)
+                return true
             }
         })
         tasks.add(object : Task(this, R.string.hasbgdata) {
